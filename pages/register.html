@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-fluid mt-3 col-8 border-2">
+            <form id="registerForm">
+             
+                <div class="mb-3">
+                  <label class="form-label">Nombres</label>
+                  <input id="firstName" type="text" class="form-control" placeholder="Nombres">
+                </div>
+                
+                <div class="mb-3">
+                  <label class="form-label">Apellidos</label>
+                  <input id="lastName" type="text" class="form-control" placeholder="Apellidos">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Usuario</label>
+                  <input id="username" type="text" class="form-control" placeholder="Usuario">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Correo Electronico</label>
+                  <input id="email" type="text" class="form-control" placeholder="Correo">
+                </div>
+
+                <label class="form-label">Roles</label>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="roles">Optiones</label>
+                  <select class="form-select" id="roles">
+                    <option selected value="null">Seleccione..</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Role1">Role1</option>
+                    <option value="Role2d">Role2</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Contraseña</label>
+                  <input id="password" type="password" class="form-control" placeholder="Contraseña">
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Fecha de Nacimiento</label>
+                  <input id="date" type="date" class="form-control" placeholder="Fecha de Nacimiento">
+                </div>
+
+                <label class="form-label">Color Favorito</label>
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="favoriteColor">Optiones</label>
+                  <select class="form-select" id="favoriteColor">
+                    <option selected value="null">Seleccione..</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Azul">Azul</option>
+                  </select>
+                </div>
+
+
+              </form>
+              
+              <button class="btn btn-outline-primary btn-sm" type="button" onclick="register()">Registrar</button>
+            </div>
+      </div>   
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+</html>
