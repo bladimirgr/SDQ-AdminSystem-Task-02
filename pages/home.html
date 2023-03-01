@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+</head>
+<body>
+            
+    <div class="container col-4 mt-5 border">
+      <div class="container-fluid mt-5">
+
+        <span>Coloque el nombre</label>
+        <input id="name" type="text" class="validate mb-3 form-control">
+        <p id="errorMessage" class="invisible">Debes colocar el nombre de la tarea</p>
+        <button id="button" class="btn btn-outline-primary form-control" type="button" onclick="insertTask()">Agregar Tarea</button>
+        <br><br>
+        <div id="list"></div>
+
+      </div>
+
+      <br><br>
+    </div>
+
+      
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

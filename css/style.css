@@ -1,3 +1,13 @@
 body {
     margin: 0;
+    background-color: aqua;
+}
+
+.invisible {
+    visibility: hidden;
+    margin: 0;
+}
+
+p {
+    color: red;
 }
