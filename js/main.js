@@ -36,30 +36,42 @@ function login() {
 const taskList = [];
 
 function insertTask() {
-    const name = document.getElementById("name")
-    const list = document.getElementById("list");
-    const li = document.createElement("li");
+    
+    const taskForm = document.getElementById("taskForm")
+    // const name = document.getElementById("name")
+    // const list = document.getElementById("list");
+    // const li = document.createElement("li");
 
-    if(name.value === "") {
+    // if(name.value === "") {
 
-        const errorMessage = document.getElementById("errorMessage")
-        errorMessage.classList.remove('invisible')
+    //     const errorMessage = document.getElementById("errorMessage")
+    //     errorMessage.classList.remove('invisible')
        
-    } else {
+    // } else {
 
-        const errorMessage = document.getElementById("errorMessage")
-        errorMessage.classList.add('invisible')
+    //     const errorMessage = document.getElementById("errorMessage")
+    //     errorMessage.classList.add('invisible')
         
-        list.appendChild(li)
-        li.append(name.value)
+    //     list.appendChild(li)
+    //     li.append(name.value)
   
-        taskList.push(name.value)
+    //     taskList.push(name.value)
 
-        create(name.value)
+    //     create(name.value)
 
-        name.value = '';
+    //     name.value = '';
 
+    // }
+
+
+    const task = {
+        title: taskForm[0].value,
+        description: taskForm[1].value,
+        date: taskForm[2].value,
+        progress: taskForm[3].value,
     }
+
+    console.log('%c⧭', 'color: #ffcc00', task);
     
 }
 
@@ -74,7 +86,6 @@ const create = (data) => {
 }
 
 
-
-window.onbeforeunload = function(e) {
-    return "Tienes algunos cambios no guardados";
-};
+// window.onbeforeunload = function(e) {
+//     return "Tienes algunos cambios no guardados";
+// };
