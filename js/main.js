@@ -1,19 +1,45 @@
 function getData () {
-    const data =  JSON.parse(localStorage.getItem("tasks")) 
+    const data = JSON.parse(localStorage.getItem("tasks"));
 
+
+    console.log('%c⧭', 'color: #ace2e6', data);
     if(!data) {
         return;
     } else {
 
-        const list = document.getElementById("list");
-    
-        for (let i = 0; i < data.length; i++) {
-            var li = document.createElement('li')
-            var value = data[i]
-            li.innerHTML = value;
-            list.appendChild(li)        
+        headers = ['Titulo','Descripción', 'Fecha', 'Progreso']
+
+        var body = document.getElementById('list');
+        var tbl = document.createElement('table');
+        tbl.style.width = '50%';
+        // tbl.setAttribute('border', '1');
+        
+        var thead = document.createElement('thead');
+        var tr = document.createElement('tr');
+        thead.appendChild(tr);
+
+        for (var i = 0; i < headers.length; i++) {
+            var th = document.createElement('th');
+            th.setAttribute('scope', 'col')
+            th.innerText = headers[i]
+            tr.appendChild(th)
+        }
+        
+        var tbody = document.createElement('tbody');
+        var tr = document.createElement('tr');
+        tbody.appendChild(tr);
+
+        for (var i = 0; i < 4; i++) {
+            var td = document.createElement('td');
+            // td.appendChild()
+
+            tr.appendChild(td);
         }
 
+        tbl.appendChild(thead);
+        tbl.appendChild(tbody);
+        body.appendChild(tbl);
+    
     }
 
 }
@@ -38,31 +64,6 @@ const taskList = [];
 function insertTask() {
     
     const taskForm = document.getElementById("taskForm")
-    // const name = document.getElementById("name")
-    // const list = document.getElementById("list");
-    // const li = document.createElement("li");
-
-    // if(name.value === "") {
-
-    //     const errorMessage = document.getElementById("errorMessage")
-    //     errorMessage.classList.remove('invisible')
-       
-    // } else {
-
-    //     const errorMessage = document.getElementById("errorMessage")
-    //     errorMessage.classList.add('invisible')
-        
-    //     list.appendChild(li)
-    //     li.append(name.value)
-  
-    //     taskList.push(name.value)
-
-    //     create(name.value)
-
-    //     name.value = '';
-
-    // }
-
 
     const task = {
         title: taskForm[0].value,
@@ -71,7 +72,7 @@ function insertTask() {
         progress: taskForm[3].value,
     }
 
-    console.log('%c⧭', 'color: #ffcc00', task);
+    create(task)
     
 }
 
@@ -84,8 +85,3 @@ const create = (data) => {
 
     return {code: 200, response: 'Dato Creado Correctamente'};
 }
-
-
-// window.onbeforeunload = function(e) {
-//     return "Tienes algunos cambios no guardados";
-// };

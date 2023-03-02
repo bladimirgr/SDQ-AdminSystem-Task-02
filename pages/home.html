@@ -12,48 +12,50 @@
     <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
 </head>
 <body>
-            
-    <div class="container col-4 mt-5 border">
-      <div class="container-fluid mt-5">
+           
+  <div class="container col-4 mt-5 border">
+    <div class="container-fluid mt-4">
 
-        <form id="taskForm">
+      <form id="taskForm">
 
-          <div class="mb-3">
-            <label class="form-label">Titulo</label>
-            <input name="form" id="title"  type="text" class="form-control" placeholder="Titulo">
-          </div>
-          
-          <div class="mb-3">
-            <label class="form-label">Descripción</label>
-            <input name="form" id="description" type="text" class="form-control" placeholder="Descripción">
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Fecha de Finalización</label>
-            <input name="form" id="date" type="date" class="form-control" placeholder="Fecha de Finalización">
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label">Marca de Progreso</label>
-            <select name="form" class="form-control" name="marca" id="marca" title="marca">
-              <option value="Null">Seleccione..</option>
-              <option value="Programada">Programada</option>
-              <option value="En Proceso">En Proceso</option>
-              <option value="Finalizada">Finalizada</option>
-              <option value="Tardia">Tardia</option>
-            </select>
-          </div>
-
-        </form>
+        <div class="mb-3">
+          <label class="form-label">Titulo</label>
+          <input name="form" id="title"  type="text" class="form-control" placeholder="Titulo">
+        </div>
         
-        <p id="errorMessage" class="invisible">Debes colocar el nombre de la tarea</p>
-        <button id="button" class="btn btn-outline-primary form-control" type="button" onclick="insertTask()">Agregar Tarea</button>
-      </div>
+        <div class="mb-3">
+          <label class="form-label">Descripción</label>
+          <input name="form" id="description" type="text" class="form-control" placeholder="Descripción">
+        </div>
 
-      <br><br>
+        <div class="mb-3">
+          <label class="form-label">Fecha de Finalización</label>
+          <input name="form" id="date" type="date" class="form-control" placeholder="Fecha de Finalización">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Marca de Progreso</label>
+          <select name="form" class="form-control" name="marca" id="marca" title="marca">
+            <option value="null">Seleccione...</option>
+            <option value="Programada">Programada</option>
+            <option value="En Proceso">En Proceso</option>
+            <option value="Finalizada">Finalizada</option>
+            <option value="Tardia">Tardia</option>
+          </select>
+        </div>
+
+      </form>
+      
+      <p id="errorMessage" class="invisible">Debes colocar el nombre de la tarea</p>
+
+      <button id="button" class="btn btn-outline-primary form-control" type="button" onclick="insertTask()">Agregar Tarea</button>
     </div>
 
-      
+  </div>
+  <br><br>
+  <div class="container-fluid" id="list"></div>
+
+  
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
